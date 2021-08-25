@@ -1,4 +1,4 @@
-# dFT in Lumerical & Python
+# dFT Spectroscopy in Lumerical & Python
 
 Functions and tools to perform dFT simulations in Lumerical Interconnect & Python. Organized into categories:
 
