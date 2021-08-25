@@ -2,7 +2,7 @@
 
 Functions and tools to perform dFT simulations in Lumerical Interconnect & Python. Organized into categories:
 
-1. [Misc. Lumerical Scripts](#misclumericalscripts): a few scripts to automate Lumerical design changes
+1. [Lumerical Scripts](#misclumericalscripts): a few scripts to automate Lumerical design changes
 
 2. [dFT Sweep 1](#dftsweep1): idealized dFT simulation
 
@@ -17,7 +17,7 @@ Functions and tools to perform dFT simulations in Lumerical Interconnect & Pytho
    
 
 
-## Misc. Lumerical Scripts <a name="misclumericalscripts"></a>
+## Lumerical Scripts <a name="misclumericalscripts"></a>
 
 A few scripts to automate Lumerical design changes. These are particularly useful when operating on a new computer or working with a new Interconnect design. These scripts must be run in the directory containing the Interconnect file. 
 
