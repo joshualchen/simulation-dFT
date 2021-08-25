@@ -51,13 +51,13 @@ Sweep the 2^j permutations of a dFT chip where phase shifting is not frequency d
 ##### 1. Edit *switch_table.csv* to define the switch character according to the dFT chip design in Interconnect.
 Editing *switch_table.csv* specifies the properties/components that must change for each switch state to run the complete parameter sweep. Example for the original 10-switch dFT design below:
 
-![switch_table Screenshot](screenshots/switch_table_example.png)
+![switch_table Screenshot](screenshots/switch_table_example.PNG)
 
 *Column A* should be named according to the component name in the Root Element (it will be concatenated, for ex. for *Row 2*, it will be referenced via "::Root Element::Switching_block_1"). 
 
 *Column B* are the properties of the components in *Column A* to be modified to define the first state (*Column C*) and the second state (*Column D*). There can be more states (e.g. continuing into columns E, F, G, etc.), and each state may depend on any number of properties greater than 0. However, list size should be consistent across each row. See valid example "weird" table below:
 
-![switch_table_weird Screenshot](screenshots/switch_table_weird_example.png)
+![switch_table_weird Screenshot](screenshots/switch_table_weird_example.PNG)
 
 Note that indexing begins in row 2 in the code; don't delete the header row 1.
 
@@ -73,7 +73,7 @@ Note that indexing begins in row 2 in the code; don't delete the header row 1.
 
 For the standard MZI design, in lines 12-14 in *run_dft_sweep.py*:
 
-![path_lengths Screenshot](screenshots/path_length_variables.png)
+![path_lengths Screenshot](screenshots/path_length_variables.PNG)
 
 * *switch_paths* lists the paths of each switch in the order of switches in *Column A* in *switch_table.csv*. Within each sub-list of paths, the paths are listed in the order of [dL up, dL down].
   
@@ -112,7 +112,7 @@ Sweep the 2^j permutations of a dFT chip where phase shifting is frequency depen
 * We must change the property of the Phase Shifter (PHS) *within* each switch. The property of the phase shifter to change is called "measurement filename," and to access within the phase shifter, we use Lumerical's double colon (::) notation. An example is in the screenshot below. 
 * To indicate the setting of each phase shifter, we input "pi2" for a pi/2 shift, "pi" for a pi shift, and "3pi2" for a 3pi/2 shift in the state columns. 
 
-![switch_table_2 Screenshot](screenshots/switch_table_2_example.png)
+![switch_table_2 Screenshot](screenshots/switch_table_2_example.PNG)
 
 ##### 2. Set the *run_dft_sweep.py* script parameters.
 
