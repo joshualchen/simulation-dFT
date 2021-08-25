@@ -1,0 +1,8 @@
+﻿Switch,Properties,State 1 Values,State 2 Values
+PHS_1,[measurement filename],"[""pi2""]","[""pi""]"
+Switch_1,"[PHS_1::measurement filename, PHS_2::measurement filename]","[""3pi2"", ""pi2""]","[""pi2"", ""pi2""]"
+Switch_3,"[PHS_1::measurement filename, PHS_2::measurement filename]","[""3pi2"", ""pi2""]","[""pi2"", ""pi2""]"
+Switch_5,"[PHS_1::measurement filename, PHS_2::measurement filename]","[""3pi2"", ""pi2""]","[""pi2"", ""pi2""]"
+Switch_2,"[PHS_1::measurement filename, PHS_2::measurement filename]","[""3pi2"", ""pi2""]","[""pi2"", ""pi2""]"
+Switch_4,"[PHS_1::measurement filename, PHS_2::measurement filename]","[""3pi2"", ""pi2""]","[""pi2"", ""pi2""]"
+Switch_6,"[PHS_1::measurement filename, PHS_2::measurement filename]","[""3pi2"", ""pi2""]","[""pi2"", ""pi2""]"

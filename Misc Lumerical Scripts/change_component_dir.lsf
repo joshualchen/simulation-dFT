@@ -1,0 +1,47 @@
+#old_dir = "C:/Users/Carlos/Dropbox (MIT)/dFTS_Derek/Interconnect/components/";
+new_dir = "C:/Users/linda/Downloads/For Dylan/components/";
+old_dir = "C:/Users/linda/Desktop/For Josh/components/";
+
+function edit_node(base_element, old_dir, new_dir) {
+    #setting to the input base_element
+    groupscope(base_element);
+    a = splitstring(getdata, endl);
+    #running list of compound elements to run edit_node on again    
+    running_list = "";
+    #for each element in base_element
+    for (i = 1:length(a)) {
+        #what is the name of the element? below
+        element = a{i};
+        if (getnamed(element, "PREFIX") == "COMPOUND") {
+            #go into the new compound element node
+            new_node = base_element + "::" + element;
+            #edit_node(new_node, old_dir, new_dir);
+            
+            #compile the compound ones to check later in a string
+            running_list = running_list + new_node + endl;
+        } else {
+            #first, try to see if they have ldf filename
+            try {
+                old_ref = getnamed(element, "ldf filename"); #renames the correct folder for ldf
+                new_ref = replacestring(old_ref, old_dir, new_dir);
+                setnamed(element, "ldf filename", new_ref);
+            }
+            #next, try to see if they have s parameters filename
+            try {
+                old_ref = getnamed(element, "s parameters filename");
+                new_ref = replacestring(old_ref, old_dir, new_dir);
+                setnamed(element, "s parameters filename", new_ref);
+            }
+        }
+    }
+    return running_list;
+}
+
+#must include below because recursion doesn't work here
+running_list = edit_node("::Root Element", old_dir, new_dir);
+
+b = splitstring(running_list, endl);
+for (i = 1:length(b)) {
+    extra = edit_node(b{i}, old_dir, new_dir);
+    ?"THERE IS EXTRA " + num2str(length(extra));
+}
