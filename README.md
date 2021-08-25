@@ -184,4 +184,4 @@ Instead of creating the characterization matrix in Lumerical, we assume no waveg
 
 ### Support
 
-You can email Joshua Chen at joshua.l.chen@gmail.com for support/questions.
+You can email Joshua Chen at joshua.l.chen@gmail.com for help/questions.
